@@ -1,0 +1,126 @@
+<template name="registration">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Farmer Registration</h4>
+			</div>		
+		</div>	
+		
+<form name="pp-cash-form" class="pp-cash-form">
+<div class="list list-inset">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input name="firstname" type="text" placeholder="Ravi">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input name="lastname" type="text" placeholder="Shankar">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Phone Number</span>
+    <input name="phonenumber" type="text" placeholder="99XXXXXXXX">
+  </label> 			
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">State</span>
+    <select name="state" data-action="changeState">
+      <option>- Select -</option>	
+      <option>Telangana</option>
+      <option>Tamil Nadu</option>
+      <option>Karnataka</option>
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">District</span>
+    <select name="district" data-action="changeDistrict">
+      <option>- Select -</option>	
+      
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Block</span>
+    <select name="block" data-action="changeBlock">
+      <option>- Select -</option>	
+    
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Village</span>
+    <select name="village" data-action="changeVillage">
+      <option>- Select -</option>	
+     
+    </select>
+  </label>
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Social Category</span>
+    <select name="socialcategory" >
+      <option>- Select -</option>
+      <option>OC</option>
+      <option>BC</option>
+      <option>SC</option>
+      <option>ST</option>	  
+     
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Aadhar ID </span>
+    <input name="aadharid" type="text" placeholder="12XXXXXXXXXX">
+  </label>
+  <span class="item"><strong>What crops do you grow?</strong></span>
+  
+  <ul name="cropsgrown">
+  <li class="item item-checkbox">
+  
+     <label class="checkbox">
+       <input type="checkbox" data-val="wheat">
+     </label>
+     Wheat
+  </li>
+  <li class="item item-checkbox" data-val="sugar cane">
+  
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Sugar Cane
+  </li>
+  <li class="item item-checkbox" data-val="rice">
+  
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Rice
+  </li>
+  </ul>		
+
+</div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" data-action="submitRegistration">
+					  Submit
+					</button>
+				</div>
+			</div>					
+</form>		
+		
+		
+		
+		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

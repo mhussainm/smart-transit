@@ -1,0 +1,89 @@
+<template name="cashDeposit">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Cash deposit details</h4>
+			</div>		
+		</div>
+		
+      {{#ionList class="list-inset"}}
+          {{#ionItem path="accountSelection" iconLeft=true}}
+            {{> ionIcon icon="ios-arrow-left"}}          
+            <h2><strong class="addln-text">Deposit in Account </strong>52XX9XXX57</h2>
+            <h3>Savings Account</h3>
+            <span>Current Balance: ₹5764.00</span>            
+          {{/ionItem}}                          
+      {{/ionList}}		
+		
+		<form name="pp-cash-form" class="pp-cash-form">
+			<div class="list list-inset">
+			  <label class="item item-input">
+				<span class="input-label">
+					₹1000
+				</span>
+				<input type="number" placeholder="Enter number of ₹1000 notes" data-rupval="1000">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹500
+				</span>
+				<input type="number" placeholder="Enter number of ₹500 notes" data-rupval="500">
+			  </label>		  
+			  <label class="item item-input">
+				<span class="input-label">
+					₹100
+				</span>
+				<input type="number" placeholder="Enter number of ₹100 notes" data-rupval="100">
+			  </label>			  
+			  <label class="item item-input">
+				<span class="input-label">
+					₹50
+				</span>
+				<input type="number" placeholder="Enter number of ₹50 notes" data-rupval="50">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹20
+				</span>
+				<input type="number" placeholder="Enter number of ₹20 notes" data-rupval="20">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹10
+				</span>
+				<input type="number" placeholder="Enter number of ₹10 notes" data-rupval="10">
+			  </label>
+			  <label class="item  item-input pp-cash-total">
+				<span class="input-label">
+					Total Cash Deposit Amount: 
+				</span>
+				<input type="text" value="₹0" readonly>
+			  </label>			  			  			  
+			</div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" data-action="confirmDeposit">
+					  Submit
+					</button>
+				</div>
+			</div>					
+		</form>		
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

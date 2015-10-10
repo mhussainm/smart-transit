@@ -1,0 +1,34 @@
+<template name="ppHeader">
+  {{#contentFor "headerTitle"}}
+    {{! <img src="/images/logo-iota-header.png?r201510041439" /> }}
+    <h1 class="title">Smart City Transit</h1>
+  {{/contentFor}}
+</template>
+
+
+<template name="index">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+	<div class="pp-home-icons-container">  
+		<div class="row pp-icon-row">
+			<div class="col pp-icon">
+				{{#linkTo route="recordRide" class="pp-icon-link"}}
+				<img src="/images/icon-record-ride.png?r201510101947" />
+				<br/>
+				<span class="text">Record a Ride</span>  
+				{{/linkTo}}				
+			</div>			
+			<div class="col pp-icon">
+                &nbsp;
+			</div>
+		</div>        
+    </div>
+    {{/ionContent}}
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

@@ -1,0 +1,54 @@
+<template name="recordRide">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+        
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Record your ride</h4>
+			</div>		
+		</div>	
+		
+
+        <div id="rr-instr" class="list list-inset">
+              <span class="item"><strong>Press START button once u&#39;re into your ride</strong></span>        	
+        </div>
+
+
+        <div class="row button-container">
+            <div class="col">
+                <button class="start" data-action="rr-start">
+                  START
+                </button>
+            </div>
+            <div class="col rr-duration-container">
+                <div id="rr-duration">00&#58;00&#58;00</div>
+            </div>            
+            <div class="col">
+                <button class="stop" data-action="rr-stop">
+                  STOP
+                </button>
+            </div>        
+        </div>					
+        
+        <div class="row">
+            <div class="col map-container">
+                {{#unless geolocationError}}
+                  {{> googleMap name="map" options=mapOptions}}
+                {{else}}
+                  Geolocation failed: {{geolocationError}}
+                {{/unless}}                
+            </div>
+        </div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

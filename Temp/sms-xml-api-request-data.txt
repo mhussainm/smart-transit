@@ -1,0 +1,10 @@
+data=
+<MESSAGE>
+	<AUTHKEY>94408AuNrHSRv56133921</AUTHKEY>
+ 	<SENDER>MHUSNM</SENDER>
+ 	<ROUTE>template</ROUTE>
+ 	<COUNTRY>91</COUNTRY>
+ 	<SMS TEXT="This is a Test SMS &amp; more &gt;">
+ 		<ADDRESS TO="9704084624"/>
+ 	</SMS>
+</MESSAGE>

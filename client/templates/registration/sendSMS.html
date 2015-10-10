@@ -1,0 +1,66 @@
+<template name="sendSMS">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Send SMS to Farmers</h4>
+			</div>		
+		</div>	
+		
+<form name="pp-search-form" class="pp-search-form">
+    <div class="list list-inset">
+          <span class="item"><strong>Select farmers you want to contact</strong></span>        
+          <ul class="farmerslist">
+              
+              {{#each farmerItems}}
+                {{> farmerItem}}
+              {{/each}}
+              
+          </ul>		
+    </div>
+	
+    <div class="list list-inset">
+          <span class="item"><strong>Enter SMS message you want to send</strong></span>        
+          <label class="item item-input">
+              <textarea name="smsText" rows="4" placeholder="SMS content"></textarea>
+          </label>          	
+    </div>    
+    
+    <div class="row pp-cash-text">
+        <div class="col">
+            <button class="button pp-cash-button" data-action="sendSMS">
+              Send SMS
+            </button>
+        </div>
+    </div>					
+</form>		
+		
+		
+		
+		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>
+
+<template name="farmerItem">
+    <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" data-val="{{phoneNumber}}" value="{{phoneNumber}}">
+     </label>
+     {{firstName}} {{lastName}} <span class="phoneNumber">&mdash; {{phoneNumber}}</span>
+    </li>    
+</template>

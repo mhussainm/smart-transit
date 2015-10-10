@@ -1,0 +1,46 @@
+<template name="iotacharts">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Realtime Reports</h4>
+			</div>		
+		</div>	
+		
+    <div class="pp-report-container">
+        
+        <div class="row">
+            <div class="col">
+                <button class="button button-light" data-action="changeChart" data-name="temperature">
+                  Temperature
+                </button>                
+            </div>
+            <div class="col">
+                <button class="button button-outline button-light" data-action="changeChart" data-name="humidity">
+                  &nbsp;&nbsp;&nbsp;Humidity&nbsp;&nbsp;&nbsp;
+                </button>                
+            </div>
+        </div>
+        
+        <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>        -->
+        <div id="chart-container"></div>        
+    </div>    
+	
+    </div>    
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+
+	
+    
+
+    
+
+</template>
