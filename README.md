@@ -1,4 +1,7 @@
-# iotahack
-IoT Hackathon - Agriculture and Weather solution based on IoT and Backend Infrastructure
+# smart-transit
 
-Work done at IoT Hackathon in Hyderabad during a rainy weekend in Oct 2015 but a team of hardware and software professionals.
+## Smart Transit - The missing link
+
+Fill in the missing link to India's public transportation information which is the private operated autos, vans, buses that our population uses for intra and inter city commutes. The project aims to bring that information into public domain by using crowd sourcing via Web and Mobile apps.
+
+Work done at BITS Pilani Smart Cities IoT Hackathon 2015 in Hyderabad.
