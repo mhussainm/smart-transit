@@ -27,6 +27,8 @@ Router.map(function() {
   this.route('farmerSearch');    
   this.route('sendSMS'); 
   this.route('recordRide');
+  this.route('submitRide');    
+  this.route('searchRide');       
   this.route('forms', {
     data: function () {
       return {

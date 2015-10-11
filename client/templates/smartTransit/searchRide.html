@@ -1,0 +1,46 @@
+<template name="searchRide">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+        
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Search for rides</h4>
+			</div>		
+		</div>	
+		
+
+        <div class="list list-inset">
+            <span class="item">Search for available rides</span>
+              <label class="item item-input">
+                <span class="input-label">Starting from</span>
+                <input id="rr-search-from" type="text" placeholder="FROM: Area, Locality, Road">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Destination</span>
+                <input id="rr-search-dest" type="text" placeholder="TO: Area, Locality, Road">
+              </label>            
+        </div>
+        
+        <div id="rr-submit-form" class="list list-inset">
+           
+        </div>		
+        
+        <div class="row">
+            <div class="col">
+                <button class="button rr-main-button" data-action="rr-submit">
+                  Show Ride Details
+                </button>
+            </div>
+        </div>        
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

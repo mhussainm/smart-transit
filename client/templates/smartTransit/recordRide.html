@@ -15,13 +15,18 @@
 		
 
         <div id="rr-instr" class="list list-inset">
-              <span class="item"><strong>Press START button once u&#39;re into your ride</strong></span>        	
+            <div class="item"><strong>Select Transport Type and press START</strong></div>            
+            <div id="trans-type-button" class="button-bar bar-calm">
+                  <a class="button" data-action="rr-trantype" data-val="auto">Auto</a>
+                  <a class="button" data-action="rr-trantype" data-val="van">Van</a>
+                  <a class="button" data-action="rr-trantype" data-val="bus">Bus</a>
+            </div>            
         </div>
-
-
+        
+        
         <div class="row button-container">
             <div class="col">
-                <button class="start" data-action="rr-start">
+                <button data-action="rr-start">
                   START
                 </button>
             </div>
@@ -29,7 +34,7 @@
                 <div id="rr-duration">00&#58;00&#58;00</div>
             </div>            
             <div class="col">
-                <button class="stop" data-action="rr-stop">
+                <button data-action="rr-stop">
                   STOP
                 </button>
             </div>        

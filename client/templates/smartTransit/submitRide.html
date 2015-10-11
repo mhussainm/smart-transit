@@ -1,0 +1,61 @@
+<template name="submitRide">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+        
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Submit ride information</h4>
+			</div>		
+		</div>	
+		
+
+        <div class="list list-inset rr-fare">
+            <span class="item">How much did you pay for the ride?</span>
+              <label class="item item-input">
+                <span class="input-label">Fare Paid</span>
+                <input id="rr-fare-paid" type="number" placeholder="₹">
+              </label>
+        </div>
+        
+        <div id="rr-submit-form" class="list list-inset">
+              <label class="item item-input">
+                <span class="input-label">Transport</span>
+                <input type="text" value="{{ transportType }}" readonly>
+              </label>            
+              <label class="item item-input">
+                <span class="input-label">Started At</span>
+                <input type="text" value="{{ startLocation }}" readonly>
+              </label>            
+              <label class="item item-input">
+                <span class="input-label">Ended At</span>
+                <input type="text" value="{{ endLocation }}" readonly>
+              </label>            
+              <label class="item item-input">
+                <span class="input-label">Time Taken</span>
+                <input type="text" value="{{ timeTaken }}" readonly>
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Distance</span>
+                <input type="text" value="{{ distance }} kms" readonly>
+              </label>            
+        </div>		
+        
+        <div class="row">
+            <div class="col">
+                <button class="button rr-main-button" data-action="rr-submit">
+                  Submit Ride Details
+                </button>
+            </div>
+        </div>        
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

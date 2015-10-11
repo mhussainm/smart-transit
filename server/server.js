@@ -36,6 +36,7 @@ Meteor.startup(function () {
 
 
 Meteor.methods({
+    
 	"resetDepositAcceptedPopupVar": function() {
 		console.log("HUSSAIN - In resetDepositAcceptedPopupVar()");
 	
@@ -48,6 +49,25 @@ Meteor.methods({
 		);
 	},
 	
+    "insertRideInfo": function(data) {
+        
+        Meteor.http.post(
+            "https://api-eu.clusterpoint.com/v4/2531/SmartTransRideInfo", 
+              { 
+                headers : { 'Authorization':'Basic bWhtYW5hc2hpYUBnbWFpbC5jb206cm9ja2llcw==' },
+                data: data
+              }, 
+              function(error, result) {
+
+                if(!error) {
+                    console.log("Successful Insert");
+                }
+                else {
+                    console.log(result.content);
+                }
+         });        
+    },
+    
     "fetchChartData": function() {
         console.log("HUSSAIN - In fetchChartData()");    
         
