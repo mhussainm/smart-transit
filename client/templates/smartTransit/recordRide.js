@@ -1,4 +1,4 @@
-var MAP_ZOOM = 15;
+var MAP_ZOOM = 14;
 var gmap;
 var rideInfo = {};
 var geoLocations = [];

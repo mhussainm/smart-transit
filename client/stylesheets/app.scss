@@ -10,7 +10,7 @@ $loading-font-size: 22px;
 	color: #4D4D4D;
 }
 
-.index-title {
+.page-title {
     margin-top: 20px;
 }
 
@@ -32,6 +32,11 @@ rr-fare {
         font-size: 15px;
         font-weight: bold;
     }    
+}
+
+#rr-fare-paid {
+    font-size: 15px;
+    font-weight: bold;    
 }
 
 #rr-submit-form {

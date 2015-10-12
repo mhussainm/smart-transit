@@ -65,7 +65,7 @@ if(Meteor.isServer) {
 				if (this.params) {
 					//console.log(this.params.query);
 					if (this.params.query) {
-						//console.log(this.params.query.action);
+						console.log('Query Object: \n ' + JSON.stringify(this.params.query));
 						if(this.params.query.action === "confirmDeposit") {
 							console.log("In Trigger Action EQ confirmDeposit");
 							Triggers.upsert(
